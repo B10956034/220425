@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using System.Collections;
+
 namespace _220425
 {
     public partial class Form1 : Form
@@ -15,6 +20,22 @@ namespace _220425
         public Form1()
         {
             InitializeComponent();
+        }
+
+        TcpListener Server; //伺服網路監聽器
+        Socket Client; //給客戶用的連線物件
+        Thread Th_Svr; //伺服器監聽用執行緒
+        Thread Th_Clt; //客戶用的通話執行緒
+        Hashtable HT = new Hashtable();
+
+
+
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
